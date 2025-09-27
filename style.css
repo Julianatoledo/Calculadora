@@ -1,62 +1,69 @@
+/* Corpo da página */
 body {
-    background-image: url(image/fundo.png);
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;    
-    margin: 0;
+    background-image: url(image/fundo.png); /* Imagem de fundo */
+    background-size: cover;                 /* Faz a imagem cobrir toda a tela */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
+    display: flex;                          /* Usado para centralizar a calculadora */
+    justify-content: center;                /* Centraliza horizontalmente */
+    align-items: center;                    /* Centraliza verticalmente */
+    height: 100vh;                          /* Altura da tela inteira */
+    margin: 0;                              /* Remove a margem padrão do navegador */
 }
 
+/* Título da calculadora */
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: auto;
-    color: rgb(180, 152, 152);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Fonte alternativa para o título */
+    text-align: center;         /* Centraliza o texto */
+    padding: 10px;              /* Espaçamento interno */
+    margin-bottom: auto;        /* Espaço automático abaixo do título */
+    color: rgb(180, 152, 152);  /* Cor do texto */
 }
 
+/* Container da calculadora */
 .calculadora {   
-    background: #463737;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    background: #463737;                /* Cor de fundo da calculadora */
+    padding: 20px;                       /* Espaçamento interno */
+    border-radius: 20px;                 /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+    text-align: center;                  /* Centraliza texto e botões dentro */
 }
 
+/* Visor da calculadora */
 #visor {
-    width: 100%;
-    height: 40px;
-    font-size: 24px;
-    text-align: right;
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #eee;
-    border: none;
+    width: 100%;          /* Ocupa toda a largura do container */
+    height: 40px;         /* Altura do campo */
+    font-size: 24px;      /* Tamanho da fonte */
+    text-align: right;    /* Alinha o texto à direita */
+    margin-bottom: 10px;  /* Espaço abaixo do visor */
+    padding: 5px;         /* Espaçamento interno */
+    background-color: #eee; /* Cor de fundo do visor */
+    border: none;         /* Remove borda padrão */
 }
 
-.botoes{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-    
+/* Container dos botões */
+.botoes {
+    display: grid;                     /* Organiza os botões em grade */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 5px;                          /* Espaço entre os botões */
 }
 
+/* Estilo padrão dos botões */
 button {
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    background-color: #975e6f;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px;                     /* Espaçamento interno */
+    font-size: 18px;                   /* Tamanho da fonte */
+    border: none;                      /* Remove borda padrão */
+    background-color: #975e6f;         /* Cor de fundo padrão dos botões */
+    color: white;                      /* Cor do texto */
+    cursor: pointer;                   /* Cursor muda para mãozinha */
+    transition: background-color 0.3s; /* Transição suave ao mudar cor no hover */
 }
 
+/* Botão ao passar o mouse */
 button:hover {
-    background-color: #d6bbbb;
+    background-color: #d6bbbb;         /* Cor muda quando o mouse está em cima */
 }
 
+/* Botões operadores (+, -, *, /, =) */
 .operador {
-    background-color: #da190b;
+    background-color: #da190b;         /* Cor vermelha para diferenciar dos números */
 }

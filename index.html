@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define a codificação de caracteres do documento -->
     <meta charset="UTF-8">
+    
+    <!-- Permite que a página seja responsiva em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece na aba do navegador -->
     <title>Calculadora Simples</title>
+    
+    <!-- Link para o arquivo CSS que vai estilizar a calculadora -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
        
+    <!-- Container principal da calculadora -->
     <div class="calculadora">
 
-         <h1>Calculadora Simples HTML, CSS E JAVASCRIPT</h1>
+        <!-- Título da calculadora -->
+        <h1>Calculadora Simples HTML, CSS E JAVASCRIPT</h1>
 
+        <!-- Visor da calculadora (input somente leitura) -->
         <input type="text" id="visor" readonly>
 
+        <!-- Container dos botões -->
         <div class="botoes">
 
-            <button onclick="limpar()"> C </button>
-            <button onclick="apagar()"> Del </button>
-            <button onclick="inserir('%')"> % </button>
-            <button class="operador" onclick="inserir('/')"> / </button>
+            <!-- Botões da calculadora, cada um chama uma função do JS ao ser clicado -->
+            <button onclick="limpar()"> C </button>       <!-- Limpa todo o visor -->
+            <button onclick="apagar()"> Del </button>    <!-- Apaga o último dígito -->
+            <button onclick="inserir('%')"> % </button> <!-- Insere o operador % -->
+            <button class="operador" onclick="inserir('/')"> / </button> <!-- Operador divisão -->
 
-
-            <button onclick="inserir('7')"> 7 </button>
-            <button onclick="inserir('8')"> 8 </button>
-            <button onclick="inserir('9')"> 9 </button>
-            <button class="operador" onclick="inserir('*')"> * </button>
+            <button onclick="inserir('7')"> 7 </button>  <!-- Número 7 -->
+            <button onclick="inserir('8')"> 8 </button>  <!-- Número 8 -->
+            <button onclick="inserir('9')"> 9 </button>  <!-- Número 9 -->
+            <button class="operador" onclick="inserir('*')"> * </button> <!-- Operador multiplicação -->
 
             <button onclick="inserir('4')"> 4 </button>
             <button onclick="inserir('5')"> 5 </button>
             <button onclick="inserir('6')"> 6 </button>
-            <button class="operador" onclick="inserir('-')"> - </button>
+            <button class="operador" onclick="inserir('-')"> - </button> <!-- Operador subtração -->
 
             <button onclick="inserir('1')"> 1 </button>
             <button onclick="inserir('2')"> 2 </button>
-            <button onclick="inserir('39')"> 3 </button>
-            <button class="operador" onclick="inserir('+')"> + </button>
+            <button onclick="inserir('39')"> 3 </button> <!-- Atenção: aqui provavelmente deveria ser '3' -->
+            <button class="operador" onclick="inserir('+')"> + </button> <!-- Operador soma -->
 
             <button onclick="inserir('0')"> 0 </button>
-            <button onclick="inserir('.')"> . </button>
-            <button onclick="calcular()" class="operador" style="grid-column: span 2;"> = </button>
-            
+            <button onclick="inserir('.')"> . </button> <!-- Ponto decimal -->
+            <button onclick="calcular()" class="operador" style="grid-column: span 2;"> = </button> <!-- Botão de igual, ocupa duas colunas -->
 
         </div>
     </div>
+
+    <!-- Link para o arquivo JS que controla a lógica da calculadora -->
     <script src="script.js"></script>
 </body>
 </html>
